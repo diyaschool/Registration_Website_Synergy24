@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=radio], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Synergy 2023-2024</h2>
+    <p>Please fill in the details.</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="https://i.imgur.com/0QJU5M3.png" style="width:50%">
+    </div>
+    <div class="column">
+      <form action="/sent_p" method="POST">
+        <label for="p_name">Parent Name:</label>
+        <input type="text" id="p_name" name="p_name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required="Please enter your email id.">
+
+        <label for="_name">Student Name:</label>
+        <input type="text" id="s_name" name="s_name" required>
+
+        <label for="class">Class:</label>
+        <select id="class" name="class" required>
+          <option value="">Select a class</option>
+          <option value="">Select a class</option>
+          <option id="PP1">PP1</option>
+          <option id="PP2">PP2</option>
+          <option id="PP3">PP3</option>
+          <option id="1">1</option>
+          <option id="2">2</option>
+          <option id="3">3</option>
+          <option id="4">4</option>
+          <option id="5">5</option>
+          <option id="6">6</option>
+          <option id="7">7</option>
+          <option id="8">8</option>
+          <option id="9">9</option>
+          <option id="10">10</option>
+        </select>
+
+        <label for="section">Section:</label>
+        <select id="section" name="section" required>
+          <option value="">Select a section</option>
+          <option id="A">A</option>
+          <option id="B">B</option>
+          <option id="C">C</option>
+        </select>
+
+        <label for="o_no">Number of members:</label>
+        <input type="number" id="o_no" name="o_no" required>
+
+
+      <input type="submit" value="Submit">
+    </form>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

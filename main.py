@@ -42,8 +42,8 @@ def sent_p():
             file.write(str(data))
             file.close()
 
-        EMAIL_ADDRESS = ''
-        EMAIL_PASSWORD = ''
+        EMAIL_ADDRESS = 'info@diyaschool.com'
+        EMAIL_PASSWORD = 'info123456'
         msg = EmailMessage()
         msg['Subject'] = 'Thank you for registering.'
         msg['From'] = 'pati02susan@gmail.com'
@@ -67,19 +67,20 @@ def sent_v():
     v_name=request.form.get("v_name")
     o_name=request.form.get("o_name")
     o_no=request.form.get("o_no")
+    how=request.form.get("how")
     if v_email in open('visitor_data.csv').read():
         return render_template('error.html')
     else:
-        data_v=f"{v_name}, {v_email}, {o_name}, {o_no}" + "\n"
+        data_v=f"{v_name}, {v_email}, {o_name}, {o_no}, {how}" + "\n"
         with open('visitor_data.csv', 'a') as file:
             file.write(str(data_v))
             file.close()
 
-        EMAIL_ADDRESS = ''
-        EMAIL_PASSWORD = ''
+        EMAIL_ADDRESS = 'diyazoom5@gmail.com'
+        EMAIL_PASSWORD = 'come_hack_me'
         msg = EmailMessage()
         msg['Subject'] = 'Thank you for registering.'
-        msg['From'] = 'pati02susan@gmail.com'
+        msg['From'] = 'diyazoom5@gmail.com'
         msg['To'] = v_email
         msg.set_content(f'''Dear {v_name},
 Thank you for visiting Synergy 2023-24. Please use the attached link to acces the floor plan to navigate around the school.
